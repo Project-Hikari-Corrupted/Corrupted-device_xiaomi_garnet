@@ -81,6 +81,8 @@ on property:ro.boot.product.hardware.sku=JP
 
 on property:sys.boot_completed=1
     write /sys/devices/virtual/thermal/thermal_message/sconfig 20
+    # Only owner can acces this node
+    chmod 440 /proc/net/unix
 
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
