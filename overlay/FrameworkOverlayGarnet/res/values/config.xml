@@ -979,4 +979,7 @@
 
     <!-- Whether device supports in-display fingerprint -->
      <bool name="config_supportsUdfps">true</bool>
+
+    <!-- Should the pinner service pin the Home application? -->
+    <bool name="config_pinnerHomeApp">false</bool>
 </resources>
