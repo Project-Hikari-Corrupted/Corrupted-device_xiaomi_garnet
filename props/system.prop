@@ -4,6 +4,10 @@ persist.vendor.cne.feature=1
 # Device
 ro.product.mod_device=garnet_global
 
+# Deep Sleep
+pm.sleep_mode=1
+vendor.post_boot.parsed=1s
+
 # QTI
 ro.vendor.qti.va_aosp.support=1
 
