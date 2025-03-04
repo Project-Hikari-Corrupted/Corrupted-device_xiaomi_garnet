@@ -73,6 +73,8 @@ on init
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
 on post-fs
+    # Apply dolby fix
+    start init-dolby_fix-sh
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -424,6 +426,12 @@ service qcomsysd /system/vendor/bin/qcom-system-daemon
     user root
     group root diag oem_2901
     disabled
+
+service init-dolby_fix-sh /vendor/bin/init.dolby_fix.sh
+    class main
+    user system
+    group system
+    oneshot 
 
 on property:persist.vendor.qcomsysd.enabled=1
     enable qcomsysd
