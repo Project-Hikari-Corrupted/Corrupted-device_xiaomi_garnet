@@ -1495,8 +1495,8 @@ vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 # Media
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
-vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
-vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|d788cc18b6bcf7db1fd2f95d48c754acee1461e4
+vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc|7298c4f6dcb53086839f940d5b746c025363855c
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
@@ -2181,7 +2181,7 @@ vendor/etc/init/init.vendor.wlan.rc
 
 # Widevine DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|c03636aaf4b8b3e5d2cf56704a4676b8f2920478
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libtrustedapploader.so
