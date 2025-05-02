@@ -10,7 +10,18 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_go_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
+CUSTOM_LOCALES := in_ID
+$(call inherit-product, vendor/bliss-priv/keys/keys.mk)
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+
+# Google Apps
+$(call inherit-product, vendor/gms/products/gms.mk)
+
+# Pixel Framework
+# $(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
 
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)

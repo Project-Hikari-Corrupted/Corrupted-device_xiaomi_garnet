@@ -976,4 +976,7 @@
          running in WAL mode.
          Choices are: FULL, NORMAL, OFF. -->
     <string name="db_wal_sync_mode" translatable="false">OFF</string>
+
+    <!-- Whether device supports in-display fingerprint -->
+     <bool name="config_supportsUdfps">true</bool>
 </resources>
