@@ -12,6 +12,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+#HorizonDroid
+HORIZON_BUILD_TYPE := OFFICIAL
+HORIZON_MAINTAINER := Soni_Hikari
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Gapps flags
+WITH_GMS := true
+WITH_GMS_VARIANT := core
+
+TARGET_INCLUDE_MATLOG := false
+
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
 
