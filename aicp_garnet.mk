@@ -10,11 +10,11 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
-#HorizonDroid
-HORIZON_BUILD_TYPE := OFFICIAL
-HORIZON_MAINTAINER := Soni_Hikari
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="Soni Dharma(Soni Hikari)"
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
@@ -23,12 +23,10 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 WITH_GMS := true
 WITH_GMS_VARIANT := core
 
-TARGET_INCLUDE_MATLOG := false
-
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
 
-PRODUCT_NAME := lineage_garnet
+PRODUCT_NAME := aicp_garnet
 PRODUCT_DEVICE := garnet
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi

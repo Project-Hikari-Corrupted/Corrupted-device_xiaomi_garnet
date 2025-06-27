@@ -74,7 +74,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/dolby/configs/vintf/dolby_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/aicp/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 
@@ -110,8 +110,8 @@ BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
-    bootinfo.fingerprint=$(LINEAGE_VERSION) \
-    swinfo.fingerprint=$(LINEAGE_VERSION)
+    bootinfo.fingerprint=$(AICP_VERSION) \
+    swinfo.fingerprint=$(AICP_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -147,7 +147,7 @@ BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVIC
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 
 # Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/aicp/config/BoardConfigReservedSize.mk
 
 BOARD_EROFS_COMPRESSOR := lz4
 BOARD_EROFS_PCLUSTER_SIZE := 262144
