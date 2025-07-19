@@ -10,15 +10,14 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lumine/config/common_full_phone.mk)
+$(call inherit-product, vendor/clover/config/common_full_phone.mk)
 WITH_GMS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-LUMINE_OFFICIAL := true
 
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
 
-PRODUCT_NAME := lumine_garnet
+PRODUCT_NAME := clover_garnet
 PRODUCT_DEVICE := garnet
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
