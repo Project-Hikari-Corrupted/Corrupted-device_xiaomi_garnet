@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lumine_garnet.mk
+    $(LOCAL_DIR)/yaap_garnet.mk
