@@ -20,6 +20,8 @@ LOCAL_PATH := $(call my-dir)
      AudioFX \
      PrebuiltGmail \
      YouTube \
+     ExactCalculator \
+     Jelly \
      FilesPrebuilt \
      RecorderPrebuilt_630544637
  LOCAL_UNINSTALLABLE_MODULE := true
