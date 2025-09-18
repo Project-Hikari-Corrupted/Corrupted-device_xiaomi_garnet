@@ -128,7 +128,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                     <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
                              samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"
                              channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_2POINT1 AUDIO_CHANNEL_OUT_QUAD AUDIO_CHANNEL_OUT_PENTA AUDIO_CHANNEL_OUT_5POINT1 AUDIO_CHANNEL_OUT_6POINT1 AUDIO_CHANNEL_OUT_7POINT1"/>
-                  <profile name="" format="AUDIO_FORMAT_PCM_32_BIT"
+                    <profile name="" format="AUDIO_FORMAT_PCM_32_BIT"
                              samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"
                              channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_2POINT1 AUDIO_CHANNEL_OUT_QUAD AUDIO_CHANNEL_OUT_PENTA AUDIO_CHANNEL_OUT_5POINT1 AUDIO_CHANNEL_OUT_6POINT1 AUDIO_CHANNEL_OUT_7POINT1"/>
                 </mixPort>
@@ -216,11 +216,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 </mixPort>
                 <mixPort name="usb_surround_sound" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 88200 96000 176400 192000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK AUDIO_CHANNEL_INDEX_MASK_3 AUDIO_CHANNEL_INDEX_MASK_4 AUDIO_CHANNEL_IN_5POINT1 AUDIO_CHANNEL_INDEX_MASK_6 AUDIO_CHANNEL_INDEX_MASK_8"/>
+                             samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 176400 192000 352800 384000"
+                             channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK AUDIO_CHANNEL_INDEX_MASK_3 AUDIO_CHANNEL_INDEX_MASK_4 AUDIO_CHANNEL_IN_5POINT1 AUDIO_CHANNEL_INDEX_MASK_6 AUDIO_CHANNEL_INDEX_MASK_8 AUDIO_OUTPUT_FLAG_RAW"/>
+                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
+                             samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"
+                             channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK AUDIO_CHANNEL_INDEX_MASK_3 AUDIO_CHANNEL_INDEX_MASK_4 AUDIO_CHANNEL_IN_5POINT1 AUDIO_CHANNEL_INDEX_MASK_6 AUDIO_CHANNEL_INDEX_MASK_8 AUDIO_OUTPUT_FLAG_RAW"/>
                     <profile name="" format="AUDIO_FORMAT_PCM_32_BIT"
-                             samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 88200 96000 176400 192000"
-                             channelMasks="AUDIO_CHANNEL_IN_5POINT1 AUDIO_CHANNEL_INDEX_MASK_6 AUDIO_CHANNEL_INDEX_MASK_8"/>
+                             samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 176400 192000 352800 384000"
+                             channelMasks="AUDIO_CHANNEL_IN_5POINT1 AUDIO_CHANNEL_INDEX_MASK_6 AUDIO_CHANNEL_INDEX_MASK_8 AUDIO_OUTPUT_FLAG_RAW"/>
                 </mixPort>
                 <mixPort name="record_24" role="sink" maxOpenCount="2" maxActiveCount="2">
                     <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
@@ -310,10 +313,18 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 <devicePort tagName="USB Device Out" type="AUDIO_DEVICE_OUT_USB_DEVICE" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="44100 48000 64000 88200 96000 128000 176400 192000"/>
+                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
+                             samplingRates="44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/>
+                    <profile name="" format="AUDIO_FORMAT_PCM_32_BIT"
+                             samplingRates="44100 48000 88200 96000 176400 192000"/>
                 </devicePort>
                 <devicePort tagName="USB Headset Out" type="AUDIO_DEVICE_OUT_USB_HEADSET" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="44100 48000 64000 88200 96000 128000 176400 192000"/>
+                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
+                             samplingRates="44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/>
+                    <profile name="" format="AUDIO_FORMAT_PCM_32_BIT"
+                             samplingRates="44100 48000 64000 88200 96000 176400 192000 352800 384000"/>    
                 </devicePort>
 
                 <!-- Input devices declaration, i.e. Source DEVICE PORT -->
@@ -419,13 +430,21 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <mixPorts>
                 <mixPort name="usb_accessory output" role="source">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="44100" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                             samplingRates="44100 48000 64000 88200 96000 128000 176400 192000 352800 384000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
+                             samplingRates="44100 48000 64000 88200 96000 128000 176400 192000 352800 384000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                    <profile name="" format="AUDIO_FORMAT_PCM_32_BIT" 
+                             samplingRates="44100 48000 64000 88200 96000 192000 352800 384000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
             </mixPorts>
             <devicePorts>
                 <devicePort tagName="USB Host Out" type="AUDIO_DEVICE_OUT_USB_ACCESSORY" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="44100" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                             samplingRates="44100 48000 64000 88200 96000 128000 176400 192000 352800 384000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                    <profile name="" format="AUDIO_FORMAT_PCM_8_24_BIT"
+                             samplingRates="44100 48000 64000 88200 96000 128000 176400 192000 352800 384000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                    <profile name="" format="AUDIO_FORMAT_PCM_32_BIT" 
+                             samplingRates="44100 48000 64000 88200 96000 192000 352800 384000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>         
                 </devicePort>
             </devicePorts>
             <routes>
