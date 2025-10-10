@@ -23,7 +23,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Call the MiuiCamera setup
-$(call inherit-product-if-exists, device/xiaomi/garnet-miuicamera/device.mk)
+$(call inherit-product-if-exists, device/xiaomi/miuicamera-garnet/device.mk)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
